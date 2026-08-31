@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions | CodeConnect Media</title>
+  
+  <!-- Brand Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23050505'/><rect x='3' y='7' width='16' height='18' rx='3' fill='%23FFFFFF'/><text x='11' y='20' font-family='Arial,sans-serif' font-weight='900' font-size='10' fill='%23000000' text-anchor='middle'>CC</text><text x='24' y='20' font-family='Arial,sans-serif' font-weight='800' font-size='9' fill='%237568FF' text-anchor='middle'>M</text></svg>" />
+
+  <!-- SEO & Compliance Meta -->
+  <meta name="description" content="Terms and Conditions for CodeConnect Media. Covers custom software development, IP ownership, international Stripe billing, and authentic travel platforms like Trainbooking.store." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: '#050505',
+            bgSecondary: '#0B0B0D',
+            card: '#111114',
+            cardElevated: '#17171B',
+            textSec: '#B5B5BD',
+            textMuted: '#777780',
+            electric: '#7568FF',
+            brightPurple: '#8B7CFF',
+            softLavender: '#B5AEFF',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::selection { background-color: #7568FF; color: #ffffff; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #050505; }
+    ::-webkit-scrollbar-thumb { background: #1f1f26; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #7568FF; }
+    .purple-radial-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(117, 104, 255, 0.14) 0%, rgba(11, 11, 13, 0) 70%);
+    }
+    .glass-nav {
+      background: rgba(11, 11, 13, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(17, 17, 20, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+  </style>
+</head>
+
+<body class="bg-bg text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- ==================== FLOATING NAVIGATION ==================== -->
+  <header class="fixed top-5 left-0 right-0 z-50 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
+      <nav class="glass-nav rounded-full px-5 py-3 flex items-center justify-between shadow-2xl transition-all duration-300">
+        
+        <a href="index.html" class="flex items-center gap-2 group focus:outline-none">
+          <div class="bg-white text-black font-extrabold text-xs sm:text-sm px-2.5 py-1 rounded-[5px] tracking-tight leading-none shadow-sm group-hover:bg-softLavender transition-colors">
+            CODECONNECT
+          </div>
+          <span class="font-extrabold text-white text-xs sm:text-sm tracking-wider uppercase">MEDIA</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-xs sm:text-sm text-textSec font-medium">
+          <a href="index.html#hero" class="hover:text-white transition-colors">Home</a>
+          <a href="index.html#services" class="hover:text-white transition-colors">Services</a>
+          <a href="index.html#work" class="hover:text-white transition-colors">Selected Work</a>
+          <a href="index.html#international" class="hover:text-white transition-colors">Global Delivery</a>
+          <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openModal('contactModal')" class="bg-white hover:bg-softLavender text-bg font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all flex items-center gap-1.5">
+            <span>Start a Project</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden text-textSec hover:text-white focus:outline-none p-1" aria-label="Toggle Menu">
+          <i class="bi bi-list text-2xl"></i>
+        </button>
+      </nav>
+
+      <div id="mobileMenu" class="hidden md:hidden mt-3 glass-card rounded-2xl p-5 border border-white/10 flex flex-col gap-4 text-center text-sm text-textSec shadow-2xl">
+        <a href="index.html#hero" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Home</a>
+        <a href="index.html#services" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Services</a>
+        <a href="index.html#work" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Selected Work</a>
+        <a href="privacy-policy.html" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Privacy Policy</a>
+        <button onclick="toggleMobileMenu(); openModal('contactModal')" class="w-full bg-white text-bg font-bold py-3 rounded-full text-xs uppercase tracking-wider">
+          Start a Project <i class="bi bi-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HEADER ==================== -->
+  <section class="pt-36 pb-12 purple-radial-glow border-b border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardElevated border border-white/10 text-xs font-mono text-softLavender mb-5">
+        <i class="bi bi-file-earmark-text-fill text-electric"></i>
+        <span>Commercial & Legal Agreement</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+        Terms and Conditions
+      </h1>
+      <p class="text-sm sm:text-base text-textSec max-w-xl mx-auto">
+        These Terms govern client engagements, custom software engineering contracts, intellectual property rights, and the operation of our digital platforms.
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-4 text-xs font-mono text-textMuted">
+        <span>Effective Date: January 2026</span>
+        <span>•</span>
+        <span>CodeConnect Media</span>
+        <span>•</span>
+        <span>Global Delivery Standard</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TERMS CONTENT ==================== -->
+  <main class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10 text-textSec leading-relaxed">
+      
+      <!-- 01. Agreement to Terms -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">01.</span> Agreement to Terms
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          By accessing the website at <strong>codeconnectmedia.com</strong> or engaging <strong>CodeConnect Media</strong> for custom software, CRM/ERP architecture, website development, UI/UX graphic design, or digital advertising services, you agree to be bound by these Terms and Conditions.
+        </p>
+        <p class="text-sm sm:text-base leading-relaxed">
+          If you do not agree with any of these terms, you are prohibited from using this website or commissioning agency services.
+        </p>
+      </section>
+
+      <!-- 02. Scope of Services & SOW -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">02.</span> Scope of Services & Sprint Execution
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          All client engagements are governed by an approved Statement of Work (SOW) or written proposal detailing sprint milestones, technical specifications, and delivery schedules.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="p-4 rounded-xl bg-cardElevated border border-white/5 text-xs text-textSec">
+            <strong class="text-white block mb-1">Agile Deliverables:</strong>
+            Work is delivered in iterative sprint cycles with client reviews via shared Figma links, GitHub repositories, and staging servers.
+          </div>
+          <div class="p-4 rounded-xl bg-cardElevated border border-white/5 text-xs text-textSec">
+            <strong class="text-white block mb-1">Scope Revisions:</strong>
+            Any modifications outside the initial SOW are documented through change orders and evaluated for timeline/budget adjustments.
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. Intellectual Property Ownership -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">03.</span> 100% Intellectual Property Transfer
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          We uphold a strict full-ownership policy. Upon full and final settlement of agreed project invoices:
+        </p>
+        <ul class="space-y-3 text-sm text-textSec pl-2">
+          <li class="flex items-start gap-2.5">
+            <i class="bi bi-check2 text-emerald-400 font-bold mt-1"></i>
+            <span><strong>Source Code:</strong> Complete ownership of all bespoke custom software, backend APIs, and database schemas is transferred to your company’s GitHub/GitLab repositories.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="bi bi-check2 text-emerald-400 font-bold mt-1"></i>
+            <span><strong>Design Assets:</strong> Full copyright of all Figma files, vector logos, and UI systems belongs exclusively to the client.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="bi bi-check2 text-emerald-400 font-bold mt-1"></i>
+            <span><strong>No Vendor Lock-In:</strong> CodeConnect Media does not charge proprietary license lock-in fees for custom-built software.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 04. International Billing & Stripe Terms -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">04.</span> Invoicing, Multi-Currency & Stripe Billing
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          We service domestic and international clients with transparent payment mechanisms:
+        </p>
+        <ul class="space-y-2 text-xs sm:text-sm text-textSec pl-2">
+          <li class="flex items-center gap-2">
+            <i class="bi bi-currency-dollar text-emerald-400"></i>
+            <span><strong>Supported Currencies:</strong> Invoices can be settled in USD, GBP, EUR, CAD, or INR as specified in the SOW.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="bi bi-stripe text-electric"></i>
+            <span><strong>Stripe Processing:</strong> International card payments and ACH transfers are processed securely through Stripe.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="bi bi-calendar-check text-softLavender"></i>
+            <span><strong>Milestone Invoicing:</strong> Standard contracts operate on upfront deposit and milestone completion sign-offs.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 05. Third-Party Portals & Trainbooking.store -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">05.</span> Travel Platform Operations & Third-Party Disclosures
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          CodeConnect Media develops and operates authentic third-party travel assistance and aggregator applications, including <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-electric font-semibold">Trainbooking.store</a>.
+        </p>
+        <div class="p-4 rounded-xl bg-cardElevated border border-white/10 text-xs text-textMuted leading-relaxed space-y-2">
+          <div><strong class="text-white">Independent Provider Status:</strong> Travel reservation websites operated or engineered by CodeConnect Media act strictly as independent third-party technology and booking assistance providers. They are not direct government transportation carriers.</div>
+          <div><strong class="text-white">Service Transparency:</strong> All ticket costs, supplier fares, and convenience/processing fees are presented to consumers transparently prior to payment confirmation in full compliance with search advertising policies.</div>
+        </div>
+      </section>
+
+      <!-- 06. Warranties & Post-Launch Support -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">06.</span> Warranty & Bug-Fix Guarantee
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          CodeConnect Media provides a <strong>30-day post-launch bug warranty</strong> on all custom software and web development deliverables to rectify any code discrepancies against the original specification.
+        </p>
+        <p class="text-xs text-textMuted">
+          Ongoing server maintenance, cloud scaling, and monthly SEO/ad management are available via separate monthly service level agreements (SLAs).
+        </p>
+      </section>
+
+      <!-- 07. Limitation of Liability -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">07.</span> Limitation of Liability
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          In no event shall CodeConnect Media, its directors, or developers be liable for any indirect, incidental, or consequential damages (including lost profits, server outages caused by third-party cloud providers, or data corruption) arising out of project execution beyond the total fees paid under the applicable SOW.
+        </p>
+      </section>
+
+      <!-- 08. Governing Law & Jurisdiction -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">08.</span> Governing Law & Jurisdiction
+        </h2>
+        <p class="text-sm sm:text-base leading-relaxed mb-4">
+          These Terms and any dispute arising from client contracts shall be governed by and construed in accordance with the laws of India. Legal proceedings shall be subject to the exclusive jurisdiction of the competent courts in <strong>Ludhiana, Punjab, India</strong>.
+        </p>
+      </section>
+
+      <!-- 09. Contact Information -->
+      <section class="glass-card rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="text-electric font-mono text-sm">09.</span> Contact Our Legal Desk
+        </h2>
+        <div class="p-4 rounded-xl bg-cardElevated border border-white/5 text-xs font-mono space-y-2 text-textSec">
+          <div><strong class="text-white">Agency:</strong> CodeConnect Media</div>
+          <div><strong class="text-white">Studio Address:</strong> Ferozepur Road, Near Aggar Nagar, Ludhiana, Punjab 141001, India</div>
+          <div><strong class="text-white">Email:</strong> legal@codeconnectmedia.com / hello@codeconnectmedia.com</div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-bgSecondary border-t border-white/10 py-12 text-sm text-textSec">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <div class="bg-white text-black font-extrabold text-xs px-2.5 py-1 rounded tracking-tight">CODECONNECT</div>
+        <span class="text-white text-xs font-bold uppercase">MEDIA</span>
+        <span class="text-textMuted text-xs ml-2">© 2026 CodeConnect Media.</span>
+      </div>
+      <div class="flex items-center gap-6 text-xs text-textMuted">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="terms-and-conditions.html" class="text-softLavender font-semibold">Terms of Service</a>
+        <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Trainbooking.store</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INQUIRY MODAL ==================== -->
+  <div id="contactModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-lg bg-card rounded-3xl border border-white/15 p-6 sm:p-8 shadow-2xl my-8">
+      <button onclick="closeModal('contactModal')" class="absolute top-5 right-5 text-textMuted hover:text-white text-xl p-1 focus:outline-none">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <h3 class="text-xl font-bold text-white mb-2">Start a Project with CodeConnect</h3>
+      <p class="text-xs text-textSec mb-6">Connect directly with our senior software engineering team.</p>
+      
+      <form onsubmit="event.preventDefault(); alert('Inquiry received! Our team will respond within 4 business hours.'); closeModal('contactModal');" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono uppercase text-textSec mb-1">Your Name / Organization</label>
+          <input type="text" required placeholder="e.g. Alex Henderson" class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric" />
+        </div>
+        <div>
+          <label class="block text-xs font-mono uppercase text-textSec mb-1">Work Email</label>
+          <input type="email" required placeholder="alex@company.com" class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric" />
+        </div>
+        <div>
+          <label class="block text-xs font-mono uppercase text-textSec mb-1">Project Scope</label>
+          <textarea rows="3" required placeholder="Describe your software, CRM, or web requirements..." class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-white hover:bg-softLavender text-bg font-bold text-xs uppercase tracking-wider transition-all">
+          Send Project Request →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+    document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('[id$="Modal"]').forEach(m => m.classList.add('hidden'));
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
+</body>
+</html>
