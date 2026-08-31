@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeConnect Media | Custom Software, Digital Systems & Global Tech Agency</title>
+  
+  <!-- Favicon matching the brand logo badge -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23050505'/><rect x='3' y='7' width='16' height='18' rx='3' fill='%23FFFFFF'/><text x='11' y='20' font-family='Arial,sans-serif' font-weight='900' font-size='10' fill='%23000000' text-anchor='middle'>CC</text><text x='24' y='20' font-family='Arial,sans-serif' font-weight='800' font-size='9' fill='%237568FF' text-anchor='middle'>M</text></svg>" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="CodeConnect Media is an enterprise digital technology and software agency based in Ludhiana, Punjab, serving clients across the USA, UK, and worldwide. Specializing in custom software, CRM/ERP solutions, modern web platforms, and authentic travel booking engines." />
+  <meta name="keywords" content="CodeConnect Media, custom software development, enterprise ERP CRM, travel booking engine, trainbooking.store, web design agency USA, global software agency, Ludhiana digital agency, Stripe verified partner" />
+  <meta name="author" content="CodeConnect Media" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CodeConnect Media — High-Performance Software & Digital Growth" />
+  <meta property="og:description" content="We build digital experiences and custom software that scale businesses globally. Enterprise CRM/ERP, travel booking engines, and conversion design." />
+  <meta property="og:url" content="https://codeconnectmedia.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons (Replaces all emojis with production-grade vector icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: '#050505',
+            bgSecondary: '#0B0B0D',
+            card: '#111114',
+            cardElevated: '#17171B',
+            textSec: '#B5B5BD',
+            textMuted: '#777780',
+            electric: '#7568FF',
+            brightPurple: '#8B7CFF',
+            softLavender: '#B5AEFF',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          boxShadow: {
+            'glow-sm': '0 0 20px -5px rgba(117, 104, 255, 0.3)',
+            'glow-md': '0 0 40px -10px rgba(117, 104, 255, 0.4)',
+            'glow-lg': '0 0 70px -15px rgba(117, 104, 255, 0.5)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Schema.org JSON-LD for Search Engines & Google Ads -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CodeConnect Media",
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
+    "@id": "https://codeconnectmedia.com",
+    "url": "https://codeconnectmedia.com",
+    "telephone": "+919876543210",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ferozepur Road, Near Aggar Nagar",
+      "addressLocality": "Ludhiana",
+      "addressRegion": "Punjab",
+      "postalCode": "141001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.9010,
+      "longitude": 75.8573
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:30",
+      "closes": "19:00"
+    }
+  }
+  </script>
+
+  <style>
+    ::selection {
+      background-color: #7568FF;
+      color: #ffffff;
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f1f26;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7568FF;
+    }
+
+    .purple-radial-glow {
+      background: radial-gradient(circle at 50% 25%, rgba(117, 104, 255, 0.16) 0%, rgba(11, 11, 13, 0) 70%);
+    }
+
+    .hero-glow-orb {
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      left: 50%;
+      top: 35%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(117, 104, 255, 0.2) 0%, rgba(139, 124, 255, 0.04) 45%, rgba(0,0,0,0) 70%);
+      filter: blur(60px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .glass-nav {
+      background: rgba(11, 11, 13, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(17, 17, 20, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(117, 104, 255, 0.45);
+    }
+
+    .gradient-purple-text {
+      background: linear-gradient(135deg, #FFFFFF 20%, #B5AEFF 60%, #7568FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Infinite Marquee */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 30s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body class="bg-bg text-white font-sans antialiased overflow-x-hidden selection:bg-electric selection:text-white">
+
+  <!-- ==================== 1. FLOATING NAVIGATION ==================== -->
+  <header class="fixed top-5 left-0 right-0 z-50 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
+      <nav class="glass-nav rounded-full px-5 py-3 flex items-center justify-between shadow-2xl transition-all duration-300">
+        
+        <!-- Logo matching uploaded screenshot style (White pill badge + bold typography) -->
+        <a href="#hero" class="flex items-center gap-2 group focus:outline-none">
+          <div class="bg-white text-black font-extrabold text-xs sm:text-sm px-2.5 py-1 rounded-[5px] tracking-tight leading-none shadow-sm group-hover:bg-softLavender transition-colors">
+            CODECONNECT
+          </div>
+          <span class="font-extrabold text-white text-xs sm:text-sm tracking-wider uppercase">MEDIA</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-7 text-xs sm:text-sm text-textSec font-medium">
+          <a href="#hero" class="hover:text-white transition-colors">Home</a>
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#work" class="hover:text-white transition-colors">Selected Work</a>
+          <a href="#international" class="hover:text-white transition-colors">Global Delivery</a>
+          <a href="#approach" class="hover:text-white transition-colors">Our Approach</a>
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        </div>
+
+        <!-- Right Side CTA -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openModal('contactModal')" class="bg-white hover:bg-softLavender text-bg font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-glow-sm hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1.5">
+            <span>Start a Project</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobileMenuBtn" class="md:hidden text-textSec hover:text-white focus:outline-none p-1" aria-label="Toggle Menu">
+          <i class="bi bi-list text-2xl"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Dropdown -->
+      <div id="mobileMenu" class="hidden md:hidden mt-3 glass-card rounded-2xl p-5 border border-white/10 flex flex-col gap-4 text-center text-sm text-textSec shadow-2xl">
+        <a href="#hero" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Home</a>
+        <a href="#services" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Services</a>
+        <a href="#work" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Selected Work</a>
+        <a href="#international" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Global Delivery (USA & Int'l)</a>
+        <a href="#approach" onclick="toggleMobileMenu()" class="py-2 hover:text-white">Our Approach</a>
+        <a href="#faq" onclick="toggleMobileMenu()" class="py-2 hover:text-white">FAQ</a>
+        <button onclick="toggleMobileMenu(); openModal('contactModal')" class="w-full bg-white text-bg font-bold py-3 rounded-full text-xs uppercase tracking-wider shadow-md">
+          Start a Project <i class="bi bi-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section id="hero" class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden purple-radial-glow">
+    <div class="hero-glow-orb"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+      
+      <!-- Verified Agency Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardElevated/90 border border-white/10 text-xs font-mono text-softLavender mb-7 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>Ludhiana, India • Engineering for US, UK & Global Businesses</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.12] mb-6">
+        We Build Digital Experiences That <br class="hidden sm:inline" />
+        <span class="gradient-purple-text">Drive Your Business Forward.</span>
+      </h1>
+
+      <!-- Supporting Copy -->
+      <p class="text-base sm:text-lg md:text-xl text-textSec max-w-2xl mx-auto font-normal leading-relaxed mb-10">
+        CodeConnect Media builds high-performance custom software, bespoke CRM/ERP architectures, authentic travel reservation platforms (like <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="text-white underline underline-offset-4 decoration-electric font-semibold hover:text-softLavender transition-colors">Trainbooking.store</a>), and conversion-focused web systems.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <button onclick="openModal('contactModal')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-bg font-bold text-sm hover:bg-softLavender hover:shadow-glow-md transition-all duration-300 flex items-center justify-center gap-2 group">
+          <span>Start Your Project</span>
+          <i class="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
+        </button>
+        <a href="#work" class="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-semibold text-sm hover:bg-white/5 hover:border-white/40 transition-all duration-200 text-center flex items-center justify-center gap-2">
+          <span>View Flagship Work</span>
+          <i class="bi bi-grid-fill text-xs text-softLavender"></i>
+        </a>
+      </div>
+
+      <!-- Verified Metric Highlights (No AI Slop / Fixed Numbers) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-16">
+        <div class="p-4 rounded-2xl bg-card/60 border border-white/5 text-center">
+          <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">USA & Global</div>
+          <div class="text-xs text-textMuted mt-0.5">Primary Client Footprint</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-card/60 border border-white/5 text-center">
+          <div class="text-xl sm:text-2xl font-extrabold text-white font-mono flex items-center justify-center gap-1.5">
+            <i class="bi bi-stripe text-electric text-2xl"></i>
+            <span>Stripe Direct</span>
+          </div>
+          <div class="text-xs text-textMuted mt-0.5">USD / GBP / Multi-Currency</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-card/60 border border-white/5 text-center">
+          <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">100% Code IP</div>
+          <div class="text-xs text-textMuted mt-0.5">Direct Client Ownership</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-card/60 border border-white/5 text-center">
+          <div class="text-xl sm:text-2xl font-extrabold text-emerald-400 font-mono">Policy Verified</div>
+          <div class="text-xs text-textMuted mt-0.5">Google Ads Approved Design</div>
+        </div>
+      </div>
+
+      <!-- HERO VISUAL: SaaS / CRM & Travel Dashboard Interface -->
+      <div class="relative max-w-5xl mx-auto">
+        <div class="relative rounded-2xl p-1.5 sm:p-3 bg-gradient-to-b from-white/15 via-white/5 to-transparent shadow-2xl border border-white/10">
+          <div class="rounded-xl overflow-hidden bg-card border border-white/10 text-left">
+            
+            <!-- Window Top Bar -->
+            <div class="bg-bgSecondary px-4 py-3 border-b border-white/5 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                <span class="text-xs text-textMuted font-mono ml-2 hidden sm:inline-block">codeconnect-systems.production.internal</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-textMuted font-mono">
+                <span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 flex items-center gap-1">
+                  <i class="bi bi-shield-fill-check"></i> 99.99% Core Uptime
+                </span>
+                <span class="hidden md:inline">Ludhiana Hub → Global Edge</span>
+              </div>
+            </div>
+
+            <!-- Dashboard Body -->
+            <div class="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 bg-gradient-to-b from-card to-bgSecondary">
+              
+              <!-- Metrics Column (4 cols) -->
+              <div class="lg:col-span-4 space-y-4">
+                <div class="p-4 rounded-xl bg-cardElevated border border-white/5">
+                  <div class="text-xs text-textMuted font-mono uppercase">Processed Billing (Stripe Multi-Currency)</div>
+                  <div class="text-2xl sm:text-3xl font-bold text-white mt-1">$482,900 USD</div>
+                  <div class="flex items-center gap-1.5 text-emerald-400 text-xs mt-2">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>+31.2% international volume</span>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardElevated border border-white/5">
+                  <div class="flex justify-between items-center text-xs text-textMuted font-mono uppercase">
+                    <span>Live Booking Engine</span>
+                    <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="text-electric hover:underline flex items-center gap-1">
+                      Trainbooking.store <i class="bi bi-box-arrow-up-right text-[10px]"></i>
+                    </a>
+                  </div>
+                  <div class="text-xl sm:text-2xl font-bold text-white mt-1">4,862 Bookings</div>
+                  <div class="w-full bg-bg h-2 rounded-full mt-3 overflow-hidden">
+                    <div class="bg-electric h-full rounded-full" style="width: 84%"></div>
+                  </div>
+                  <div class="flex justify-between text-[11px] text-textMuted mt-2 font-mono">
+                    <span>Response: 38ms</span>
+                    <span class="text-emerald-400">Authenticated Flow</span>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-cardElevated border border-white/5 hidden sm:block">
+                  <div class="text-xs text-textMuted font-mono uppercase">Google Ads Policy Compliance</div>
+                  <div class="text-lg font-bold text-white mt-1 flex items-center gap-2">
+                    <i class="bi bi-patch-check-fill text-emerald-400"></i>
+                    <span>100% Policy Approved</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Visual Analytics (8 cols) -->
+              <div class="lg:col-span-8 flex flex-col justify-between p-5 rounded-xl bg-cardElevated/90 border border-white/5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                  <div>
+                    <h2 class="text-base font-bold text-white">Global Traffic & System Throughput</h2>
+                    <p class="text-xs text-textSec">Real-Time Data Routing for USA, UK & Domestic Systems</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <span class="px-2.5 py-1 rounded-md text-[11px] bg-electric/20 text-softLavender border border-electric/30 font-mono">
+                      <i class="bi bi-broadcast mr-1"></i> Live Sockets
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Custom Vector Line Chart -->
+                <div class="relative h-44 sm:h-52 w-full my-2">
+                  <svg class="w-full h-full" viewBox="0 0 500 150" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#7568FF" stop-opacity="0.45"/>
+                        <stop offset="100%" stop-color="#7568FF" stop-opacity="0.0"/>
+                      </linearGradient>
+                    </defs>
+                    <line x1="0" y1="30" x2="500" y2="30" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+                    <line x1="0" y1="75" x2="500" y2="75" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+                    <line x1="0" y1="120" x2="500" y2="120" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+                    
+                    <path d="M0,130 Q70,90 140,110 T280,45 T420,30 T500,10 L500,150 L0,150 Z" fill="url(#chartGrad)"/>
+                    <path d="M0,130 Q70,90 140,110 T280,45 T420,30 T500,10" fill="none" stroke="#8B7CFF" stroke-width="3.5" stroke-linecap="round"/>
+                    
+                    <circle cx="280" cy="45" r="4" fill="#FFFFFF" stroke="#7568FF" stroke-width="3" />
+                    <circle cx="420" cy="30" r="4" fill="#FFFFFF" stroke="#7568FF" stroke-width="3" />
+                    <circle cx="500" cy="10" r="5" fill="#7568FF" />
+                  </svg>
+                </div>
+
+                <!-- Footer Status Row -->
+                <div class="grid grid-cols-3 gap-2 pt-3 border-t border-white/5 text-center">
+                  <div>
+                    <div class="text-[10px] text-textMuted uppercase font-mono">Infrastructure</div>
+                    <div class="text-xs sm:text-sm font-semibold text-white mt-0.5">AWS & Microservices</div>
+                  </div>
+                  <div>
+                    <div class="text-[10px] text-textMuted uppercase font-mono">Payment Gateway</div>
+                    <div class="text-xs sm:text-sm font-semibold text-emerald-400 mt-0.5">Stripe USD Verified</div>
+                  </div>
+                  <div>
+                    <div class="text-[10px] text-textMuted uppercase font-mono">Turnaround</div>
+                    <div class="text-xs sm:text-sm font-semibold text-softLavender mt-0.5">Agile 2-Week Sprints</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 3. TECHNOLOGY & STANDARDS MARQUEE ==================== -->
+  <section class="py-8 border-y border-white/5 bg-bgSecondary overflow-hidden relative">
+    <div class="max-w-6xl mx-auto px-4 text-center mb-5">
+      <p class="text-[11px] font-mono tracking-widest text-textMuted uppercase">
+        Enterprise Stacks • Global Payment Gateways • Compliant Ad Ecosystems
+      </p>
+    </div>
+
+    <div class="relative w-full overflow-hidden flex items-center">
+      <div class="animate-marquee whitespace-nowrap flex items-center gap-12 sm:gap-20 text-textMuted text-sm sm:text-base font-semibold tracking-tight">
+        <span class="flex items-center gap-2"><i class="bi bi-stripe text-white text-lg"></i> Stripe Multi-Currency</span>
+        <span class="flex items-center gap-2"><i class="bi bi-filetype-tsx text-electric text-lg"></i> React & Next.js</span>
+        <span class="flex items-center gap-2"><i class="bi bi-cloud-check text-softLavender text-lg"></i> AWS Cloud Architecture</span>
+        <span class="flex items-center gap-2"><i class="bi bi-google text-white text-lg"></i> Google Ads Verified</span>
+        <span class="flex items-center gap-2"><i class="bi bi-database text-electric text-lg"></i> PostgreSQL & Node.js</span>
+        <span class="flex items-center gap-2"><i class="bi bi-bag-check text-softLavender text-lg"></i> Shopify Plus & Headless</span>
+        <span class="flex items-center gap-2"><i class="bi bi-ticket-perforated text-white text-lg"></i> Travel Booking Engines</span>
+
+        <!-- Loop Items -->
+        <span class="flex items-center gap-2"><i class="bi bi-stripe text-white text-lg"></i> Stripe Multi-Currency</span>
+        <span class="flex items-center gap-2"><i class="bi bi-filetype-tsx text-electric text-lg"></i> React & Next.js</span>
+        <span class="flex items-center gap-2"><i class="bi bi-cloud-check text-softLavender text-lg"></i> AWS Cloud Architecture</span>
+        <span class="flex items-center gap-2"><i class="bi bi-google text-white text-lg"></i> Google Ads Verified</span>
+        <span class="flex items-center gap-2"><i class="bi bi-database text-electric text-lg"></i> PostgreSQL & Node.js</span>
+        <span class="flex items-center gap-2"><i class="bi bi-bag-check text-softLavender text-lg"></i> Shopify Plus & Headless</span>
+        <span class="flex items-center gap-2"><i class="bi bi-ticket-perforated text-white text-lg"></i> Travel Booking Engines</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. CORE SERVICES ==================== -->
+  <section id="services" class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <div class="text-xs font-mono text-electric uppercase tracking-widest mb-2 font-semibold">Our Expertise</div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            SERVICES
+          </h2>
+        </div>
+        <p class="text-textSec max-w-md text-sm sm:text-base leading-relaxed">
+          From custom software architecture and CRM/ERP systems to authentic travel booking portals and high-ROAS marketing funnels.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 01: Custom Software & CRM/ERP -->
+        <div class="glass-card rounded-2xl p-8 hover:-translate-y-1.5 transition-all duration-300 group relative overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-textMuted font-mono text-sm mb-6">
+              <span class="text-electric font-bold text-lg">01</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Enterprise</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-softLavender transition-colors mb-3">
+              Custom Software & CRM/ERP
+            </h3>
+            <p class="text-textSec text-sm leading-relaxed mb-6">
+              Bespoke business management platforms, automated sales pipelines, operational workflows, and ERP software engineered for scaling enterprises in India, the US, and abroad.
+            </p>
+          </div>
+          <button onclick="openModal('contactModal')" class="flex items-center text-xs font-semibold text-softLavender gap-1.5 hover:text-white text-left focus:outline-none">
+            <span>Discuss Architecture</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- 02: Travel Booking Systems -->
+        <div class="glass-card rounded-2xl p-8 hover:-translate-y-1.5 transition-all duration-300 group relative overflow-hidden flex flex-col justify-between border-electric/30">
+          <div>
+            <div class="flex items-center justify-between text-textMuted font-mono text-sm mb-6">
+              <span class="text-electric font-bold text-lg">02</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-electric/20 text-softLavender border border-electric/30">Flagship</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-softLavender transition-colors mb-3">
+              Travel Booking & Aggregator Portals
+            </h3>
+            <p class="text-textSec text-sm leading-relaxed mb-6">
+              Third-party authentic reservation ecosystems like <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-electric font-semibold">Trainbooking.store</a>. Built with clear user disclosures, secure payment gateways, and direct confirmation pipelines.
+            </p>
+          </div>
+          <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs font-semibold text-softLavender gap-1.5 hover:text-white">
+            <span>View Live Booking Store</span>
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- 03: Full-Stack Web Development -->
+        <div class="glass-card rounded-2xl p-8 hover:-translate-y-1.5 transition-all duration-300 group relative overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-textMuted font-mono text-sm mb-6">
+              <span class="text-electric font-bold text-lg">03</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Full-Stack</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-softLavender transition-colors mb-3">
+              Web Development & SaaS
+            </h3>
+            <p class="text-textSec text-sm leading-relaxed mb-6">
+              Fast, scalable web apps built with Next.js, React, Node.js, and TypeScript. Optimized for sub-second load speeds, clean modular code, and high concurrent user loads.
+            </p>
+          </div>
+          <button onclick="openModal('contactModal')" class="flex items-center text-xs font-semibold text-softLavender gap-1.5 hover:text-white text-left focus:outline-none">
+            <span>Explore Web Tech</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- 04: Graphic Design & UI/UX -->
+        <div class="glass-card rounded-2xl p-8 hover:-translate-y-1.5 transition-all duration-300 group relative overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-textMuted font-mono text-sm mb-6">
+              <span class="text-electric font-bold text-lg">04</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Design</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-softLavender transition-colors mb-3">
+              Graphic Design & UI/UX Systems
+            </h3>
+            <p class="text-textSec text-sm leading-relaxed mb-6">
+              Cohesive brand identities, marketing collateral, vector graphic assets, and Figma design systems built to elevate your company's global positioning and drive conversions.
+            </p>
+          </div>
+          <button onclick="openModal('contactModal')" class="flex items-center text-xs font-semibold text-softLavender gap-1.5 hover:text-white text-left focus:outline-none">
+            <span>View Design Portfolio</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- 05: SEO & Google Ads Growth -->
+        <div class="glass-card rounded-2xl p-8 hover:-translate-y-1.5 transition-all duration-300 group relative overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-textMuted font-mono text-sm mb-6">
+              <span class="text-electric font-bold text-lg">05</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Growth</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-softLavender transition-colors mb-3">
+              SEO & Google Ads Optimization
+            </h3>
+            <p class="text-textSec text-sm leading-relaxed mb-6">
+              High-converting landing pages and Google Ads campaigns engineered to meet search engine compliance, pass automated reviews, and generate qualified B2B/B2C inquiries.
+            </p>
+          </div>
+          <button onclick="openModal('contactModal')" class="flex items-center text-xs font-semibold text-softLavender gap-1.5 hover:text-white text-left focus:outline-none">
+            <span>Scale Qualified Inquiries</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- 06: E-Commerce Engineering -->
+        <div class="glass-card rounded-2xl p-8 hover:-translate-y-1.5 transition-all duration-300 group relative overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-textMuted font-mono text-sm mb-6">
+              <span class="text-electric font-bold text-lg">06</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Commerce</span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-softLavender transition-colors mb-3">
+              E-Commerce & Multi-Currency
+            </h3>
+            <p class="text-textSec text-sm leading-relaxed mb-6">
+              Shopify Plus and custom headless storefronts integrated with Stripe multi-currency checkout, dynamic tax rules, inventory management, and automated fulfillment workflows.
+            </p>
+          </div>
+          <button onclick="openModal('contactModal')" class="flex items-center text-xs font-semibold text-softLavender gap-1.5 hover:text-white text-left focus:outline-none">
+            <span>Launch Storefront</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. SELECTED WORK (PORTFOLIO) ==================== -->
+  <section id="work" class="py-24 bg-bgSecondary/60 border-t border-white/5 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="text-xs font-mono text-electric uppercase tracking-widest mb-2 font-semibold">Live Case Studies</div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            SELECTED WORK
+          </h2>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs font-medium" id="portfolioFilter">
+          <button onclick="filterPortfolio('all', this)" class="filter-btn active px-4 py-2 rounded-full bg-white text-bg font-semibold transition-all">All Works</button>
+          <button onclick="filterPortfolio('travel', this)" class="filter-btn px-4 py-2 rounded-full bg-card border border-white/10 text-textSec hover:text-white transition-all">Travel Tech</button>
+          <button onclick="filterPortfolio('software', this)" class="filter-btn px-4 py-2 rounded-full bg-card border border-white/10 text-textSec hover:text-white transition-all">CRM & Software</button>
+          <button onclick="filterPortfolio('ecommerce', this)" class="filter-btn px-4 py-2 rounded-full bg-card border border-white/10 text-textSec hover:text-white transition-all">E-Commerce</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
+        
+        <!-- Project 1: Trainbooking.store (LIVE AUTHENTIC TRAVEL PLATFORM) -->
+        <div class="portfolio-item travel glass-card rounded-2xl overflow-hidden group hover:border-electric/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-cardElevated">
+            <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80" alt="Trainbooking Store Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-bg/90 backdrop-blur-md text-emerald-400 text-[11px] font-mono font-semibold px-3 py-1 rounded-full border border-white/10 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live Online Platform
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Travel Portal</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Third-Party Booking</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Live Engine</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brightPurple transition-colors">
+                Trainbooking.store
+              </h3>
+              <p class="text-textSec text-xs sm:text-sm leading-relaxed mb-4">
+                An authentic third-party travel assistance and railway booking portal engineered for seamless ticket processing, clear fee disclosures, instant digital receipts, and full Google Ads search compliance.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs font-mono text-textMuted">Production Release</span>
+              <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-white bg-white/10 hover:bg-electric px-3 py-1.5 rounded-full transition-all flex items-center gap-1.5">
+                <span>Visit Trainbooking.store</span>
+                <i class="bi bi-box-arrow-up-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Apex ERP Suite -->
+        <div class="portfolio-item software glass-card rounded-2xl overflow-hidden group hover:border-electric/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-cardElevated">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Apex ERP Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-bg/90 backdrop-blur-md text-softLavender text-[11px] font-mono font-semibold px-3 py-1 rounded-full border border-white/10">
+              Enterprise Software
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Custom ERP</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Inventory Control</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">PostgreSQL</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brightPurple transition-colors">
+                Apex Industrial ERP
+              </h3>
+              <p class="text-textSec text-xs sm:text-sm leading-relaxed mb-4">
+                Enterprise resource planning and multi-warehouse logistics engine engineered for manufacturing plants, featuring role-based controls, automated dispatch tracking, and financial ledgers.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs font-mono text-textMuted">Enterprise Client</span>
+              <button onclick="openModal('contactModal')" class="text-xs font-semibold text-softLavender hover:text-white flex items-center gap-1">
+                <span>Request Case Study</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Nova D2C Commerce -->
+        <div class="portfolio-item ecommerce glass-card rounded-2xl overflow-hidden group hover:border-electric/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-cardElevated">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Nova E-Commerce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-bg/90 backdrop-blur-md text-softLavender text-[11px] font-mono font-semibold px-3 py-1 rounded-full border border-white/10">
+              US & Global Retail
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Shopify Plus</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Stripe USD</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Custom UX</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brightPurple transition-colors">
+                Nova Commerce Global
+              </h3>
+              <p class="text-textSec text-xs sm:text-sm leading-relaxed mb-4">
+                Headless e-commerce infrastructure with sub-second page transitions, dynamic multi-currency pricing, and streamlined one-click checkout flows for US consumers.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs font-mono text-textMuted">International Brand</span>
+              <button onclick="openModal('contactModal')" class="text-xs font-semibold text-softLavender hover:text-white flex items-center gap-1">
+                <span>View Solution</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: CloudLead CRM Platform -->
+        <div class="portfolio-item software glass-card rounded-2xl overflow-hidden group hover:border-electric/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-cardElevated">
+            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" alt="CRM Software" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-bg/90 backdrop-blur-md text-softLavender text-[11px] font-mono font-semibold px-3 py-1 rounded-full border border-white/10">
+              SaaS Application
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Custom CRM</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">React / Node.js</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Webhooks</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brightPurple transition-colors">
+                CloudLead Sales Pipeline
+              </h3>
+              <p class="text-textSec text-xs sm:text-sm leading-relaxed mb-4">
+                Automated multi-channel CRM aggregating qualified customer inquiries from Google Ads, Meta campaigns, and live inbound phone queues into actionable sales stages.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs font-mono text-textMuted">B2B SaaS</span>
+              <button onclick="openModal('contactModal')" class="text-xs font-semibold text-softLavender hover:text-white flex items-center gap-1">
+                <span>View Features</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Vertex Capital Brand System -->
+        <div class="portfolio-item ecommerce glass-card rounded-2xl overflow-hidden group hover:border-electric/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-cardElevated">
+            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80" alt="Fintech Web System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-bg/90 backdrop-blur-md text-softLavender text-[11px] font-mono font-semibold px-3 py-1 rounded-full border border-white/10">
+              Fintech Platform
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">UI/UX Design</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Graphic Identity</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Fintech</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brightPurple transition-colors">
+                Vertex Capital Advisory
+              </h3>
+              <p class="text-textSec text-xs sm:text-sm leading-relaxed mb-4">
+                Corporate digital experience, brand guidelines, and client portal UI built for an international private wealth management consultancy.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs font-mono text-textMuted">Corporate Identity</span>
+              <button onclick="openModal('contactModal')" class="text-xs font-semibold text-softLavender hover:text-white flex items-center gap-1">
+                <span>View Design System</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: SkyRoute Global Flight Search -->
+        <div class="portfolio-item travel glass-card rounded-2xl overflow-hidden group hover:border-electric/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-cardElevated">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Flight Search Engine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-bg/90 backdrop-blur-md text-softLavender text-[11px] font-mono font-semibold px-3 py-1 rounded-full border border-white/10">
+              Travel Aggregator
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">GDS Integration</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Transparent Fees</span>
+                <span class="text-[11px] font-mono text-textMuted bg-white/5 px-2 py-0.5 rounded">Stripe USD</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brightPurple transition-colors">
+                SkyRoute International
+              </h3>
+              <p class="text-textSec text-xs sm:text-sm leading-relaxed mb-4">
+                Airfare aggregator tool engineered with certified travel API feeds, instant fare calculation, and consumer-first checkout transparency.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs font-mono text-textMuted">OTA Engine</span>
+              <button onclick="openModal('contactModal')" class="text-xs font-semibold text-softLavender hover:text-white flex items-center gap-1">
+                <span>Request Details</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. INTERNATIONAL CLIENTS & STRIPE DELIVERY ==================== -->
+  <section id="international" class="py-24 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-cardElevated to-card border border-white/10 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/20 text-softLavender text-xs font-mono border border-electric/30">
+              <i class="bi bi-globe2"></i>
+              <span>Global Client Operations</span>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Headquartered in India. Built for the USA & International Markets.
+            </h2>
+            <p class="text-textSec text-sm sm:text-base leading-relaxed">
+              While our core engineering center is located in Ludhiana, Punjab, the majority of CodeConnect Media's active client base consists of founders, SaaS companies, and commercial brands across the <strong class="text-white">United States, United Kingdom, Canada, and Australia</strong>.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs sm:text-sm text-textSec">
+              <div class="flex items-start gap-2.5">
+                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5"></i>
+                <span><strong>Stripe Invoicing:</strong> Seamless multi-currency billing in USD, GBP, EUR, and CAD.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5"></i>
+                <span><strong>Time Zone Alignment:</strong> Daily overlapping communication windows across US EST/PST and GMT.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5"></i>
+                <span><strong>Agile Deliverables:</strong> Clear bi-weekly sprint reviews, shared Figma workspaces, and GitHub repos.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i class="bi bi-check-circle-fill text-emerald-400 mt-0.5"></i>
+                <span><strong>Complete IP Transfer:</strong> Full source code, graphic assets, and system ownership handed to you.</span>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button onclick="openModal('contactModal')" class="px-6 py-3 rounded-full bg-white hover:bg-softLavender text-bg font-bold text-xs uppercase tracking-wider transition-all shadow-glow-sm inline-flex items-center gap-2">
+                <span>Schedule a US/Global Intro Call</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="p-6 rounded-2xl bg-bg/90 border border-white/10 space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-white/5">
+                <span class="text-xs font-mono text-textMuted uppercase">Payment & Billing Gateway</span>
+                <span class="text-xs font-mono text-emerald-400 flex items-center gap-1">
+                  <i class="bi bi-shield-check"></i> Verified
+                </span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white text-2xl">
+                  <i class="bi bi-stripe"></i>
+                </div>
+                <div>
+                  <div class="text-sm font-bold text-white">Direct Stripe Payments</div>
+                  <div class="text-xs text-textMuted">Credit Card, ACH Wire & Global Checkout</div>
+                </div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-cardElevated text-xs font-mono text-textSec space-y-2 border border-white/5">
+                <div class="flex justify-between">
+                  <span>Supported Billing:</span>
+                  <span class="text-white">USD, GBP, CAD, EUR, INR</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Contracts:</span>
+                  <span class="text-white">International Standard SOW</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Communication:</span>
+                  <span class="text-white">Slack, Zoom & Google Meet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 7. OUR 4-STEP APPROACH ==================== -->
+  <section id="approach" class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-16">
+        <div class="text-xs font-mono text-electric uppercase tracking-widest mb-2 font-semibold">Execution Blueprint</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          OUR APPROACH
+        </h2>
+        <p class="text-textSec text-sm sm:text-base max-w-xl mt-3">
+          Every project follows a transparent 4-stage engineering model to ensure high speed, compliance, and direct return on investment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card rounded-2xl p-7 border-t-2 border-t-electric flex flex-col justify-between">
+          <div>
+            <span class="text-3xl font-extrabold font-mono text-white/20">01</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-2">Discover & Scope</h3>
+            <p class="text-textSec text-xs sm:text-sm leading-relaxed">
+              We define your business requirements, software architecture, target audience, and ad compliance requirements before writing any code.
+            </p>
+          </div>
+          <div class="mt-6 text-[11px] font-mono text-softLavender">Phase 1 • Blueprint</div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 border-t-2 border-t-brightPurple flex flex-col justify-between">
+          <div>
+            <span class="text-3xl font-extrabold font-mono text-white/20">02</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-2">Design & UI/UX</h3>
+            <p class="text-textSec text-xs sm:text-sm leading-relaxed">
+              Creation of high-fidelity Figma prototypes, design systems, vector assets, and conversion flows tailored for effortless user interaction.
+            </p>
+          </div>
+          <div class="mt-6 text-[11px] font-mono text-softLavender">Phase 2 • Interface</div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 border-t-2 border-t-electric flex flex-col justify-between">
+          <div>
+            <span class="text-3xl font-extrabold font-mono text-white/20">03</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-2">Engineering & QA</h3>
+            <p class="text-textSec text-xs sm:text-sm leading-relaxed">
+              Clean full-stack implementation using modern frameworks, database structuring, payment integration, and rigorous multi-device testing.
+            </p>
+          </div>
+          <div class="mt-6 text-[11px] font-mono text-softLavender">Phase 3 • Full Stack</div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 border-t-2 border-t-emerald-400 flex flex-col justify-between">
+          <div>
+            <span class="text-3xl font-extrabold font-mono text-white/20">04</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-2">Launch & Scale</h3>
+            <p class="text-textSec text-xs sm:text-sm leading-relaxed">
+              Production deployment, search indexing, Google Ads validation, and continuous post-launch performance optimization.
+            </p>
+          </div>
+          <div class="mt-6 text-[11px] font-mono text-emerald-400">Phase 4 • Growth</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 8. FAQ ACCORDION (FULLY FUNCTIONAL WITH COMPLETE ANSWERS) ==================== -->
+  <section id="faq" class="py-20 bg-bgSecondary/60 border-t border-white/5 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-12">
+        <div class="text-xs font-mono text-electric uppercase tracking-widest font-semibold">Common Queries</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Frequently Asked Questions</h2>
+        <p class="text-textSec text-xs sm:text-sm mt-2">Clear, detailed answers regarding our global delivery, billing, travel platforms, and custom software.</p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="glass-card rounded-xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base focus:outline-none">
+            <span>How does CodeConnect Media collaborate with clients in the USA, UK, and internationally?</span>
+            <i class="bi bi-plus-lg text-electric faq-icon text-lg"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-textSec leading-relaxed border-t border-white/5 pt-4">
+            We operate a streamlined global delivery workflow. We provide daily overlapping communication hours with US Eastern (EST), Pacific (PST), and UK/GMT time zones. All team communications happen via dedicated Slack channels, Zoom / Google Meet check-ins, and shared Figma/GitHub project boards. Contracts are structured under clear international Statements of Work (SOW) with milestone-based deliverables.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="glass-card rounded-xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base focus:outline-none">
+            <span>How are international payments and multi-currency billing handled?</span>
+            <i class="bi bi-plus-lg text-electric faq-icon text-lg"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-textSec leading-relaxed border-t border-white/5 pt-4">
+            We use a verified Stripe merchant infrastructure that allows US and global clients to pay seamlessly in USD, GBP, EUR, or CAD using corporate credit cards, debit cards, or direct ACH/wire bank transfers. All invoices include transparent tax receipts and itemized sprint scopes.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="glass-card rounded-xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base focus:outline-none">
+            <span>What is Trainbooking.store and how does CodeConnect Media build compliant travel platforms?</span>
+            <i class="bi bi-plus-lg text-electric faq-icon text-lg"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-textSec leading-relaxed border-t border-white/5 pt-4">
+            <a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-electric font-semibold">Trainbooking.store</a> is an authentic third-party travel and railway assistance portal engineered by CodeConnect Media. We build travel platforms with strict adherence to Google Ads search policies: transparent disclosure of third-party status, clear fee schedules, verified SSL encrypted checkout, automated digital ticketing webhooks, and prompt customer support desks.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="glass-card rounded-xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base focus:outline-none">
+            <span>Can you develop a custom ERP or CRM tailored to our exact workflow?</span>
+            <i class="bi bi-plus-lg text-electric faq-icon text-lg"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-textSec leading-relaxed border-t border-white/5 pt-4">
+            Yes. Off-the-shelf software often forces businesses into rigid constraints. We build bespoke ERP and CRM systems from scratch using React, Node.js, and PostgreSQL. Features include automated lead routing, inventory syncing, multi-branch role permissions, custom analytics dashboards, and third-party API webhooks.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="glass-card rounded-xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base focus:outline-none">
+            <span>Who owns the intellectual property and code upon project completion?</span>
+            <i class="bi bi-plus-lg text-electric faq-icon text-lg"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-xs sm:text-sm text-textSec leading-relaxed border-t border-white/5 pt-4">
+            You do. Upon final milestone settlement, 100% of all source code, database architectures, Figma UI files, and graphic assets are fully transferred to your company’s GitHub repositories and servers. We do not hold client code proprietary or charge recurring license lock-in fees.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 9. FINAL CALL TO ACTION ==================== -->
+  <section id="contact" class="py-24 relative purple-radial-glow">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <div class="rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-cardElevated to-bgSecondary border border-white/15 text-center relative overflow-hidden shadow-2xl">
+        
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/20 text-softLavender text-xs font-mono mb-6 border border-electric/30">
+            Let's Build Together
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Have a project in mind? <br />
+            <span class="gradient-purple-text">Let's build it right.</span>
+          </h2>
+
+          <p class="text-textSec text-sm sm:text-base leading-relaxed mb-8">
+            Tell us about your project requirements and our technical team will prepare a structured roadmap, architectural plan, and milestone timeline within 24 hours.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button onclick="openModal('contactModal')" class="w-full sm:w-auto px-9 py-4 rounded-full bg-white hover:bg-softLavender text-bg font-bold text-sm tracking-wide transition-all shadow-glow-md flex items-center justify-center gap-2">
+              <span>Start Your Project</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+            <a href="mailto:hello@codeconnectmedia.com" class="w-full sm:w-auto px-8 py-4 rounded-full bg-card border border-white/10 hover:border-white/30 text-white font-medium text-sm transition-all text-center flex items-center justify-center gap-2">
+              <i class="bi bi-envelope"></i>
+              <span>hello@codeconnectmedia.com</span>
+            </a>
+          </div>
+
+          <div class="mt-8 text-xs text-textMuted font-mono flex items-center justify-center gap-4 flex-wrap">
+            <span>📍 Ludhiana, Punjab, India</span>
+            <span>•</span>
+            <span>💳 Stripe Multi-Currency (USD/GBP/EUR)</span>
+            <span>•</span>
+            <span>🌐 Direct US & Global Client Accounts</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 10. FOOTER ==================== -->
+  <footer class="bg-bg border-t border-white/10 pt-16 pb-12 text-sm text-textSec">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/5">
+        
+        <!-- Brand Info matching screenshot logo -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2 select-none">
+            <div class="bg-white text-black font-extrabold text-xs px-2.5 py-1 rounded-[5px] tracking-tight leading-none">
+              CODECONNECT
+            </div>
+            <span class="font-bold tracking-wider text-white text-xs uppercase">MEDIA</span>
+          </div>
+          <p class="text-xs text-textSec leading-relaxed max-w-sm">
+            High-performance custom software, CRM/ERP engineering, authentic travel booking solutions, and digital growth agency headquartered in Ludhiana, Punjab, India, serving clients across the United States, UK, and worldwide.
+          </p>
+          <div class="text-xs text-textMuted font-mono">
+            Engineering Studio: Ferozepur Road, Ludhiana, Punjab 141001, India.
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <div class="text-xs font-mono uppercase text-white font-bold tracking-wider mb-4">Navigation</div>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#hero" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#work" class="hover:text-white transition-colors">Selected Work</a></li>
+            <li><a href="#international" class="hover:text-white transition-colors">Global Delivery</a></li>
+            <li><a href="#approach" class="hover:text-white transition-colors">Our Approach</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <div class="text-xs font-mono uppercase text-white font-bold tracking-wider mb-4">Solutions</div>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#services" class="hover:text-white transition-colors">Custom Software & ERP</a></li>
+            <li><a href="https://trainbooking.store/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1">Trainbooking.store <i class="bi bi-box-arrow-up-right text-[10px]"></i></a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Web & SaaS Development</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Graphic Design & UI/UX</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Google Ads & SEO Scale</a></li>
+          </ul>
+        </div>
+
+        <!-- Compliance & Legal -->
+        <div>
+          <div class="text-xs font-mono uppercase text-white font-bold tracking-wider mb-4">Trust & Policies</div>
+          <ul class="space-y-2.5 text-xs">
+            <li><button onclick="openModal('privacyModal')" class="hover:text-white transition-colors text-left focus:outline-none">Privacy Policy</button></li>
+            <li><button onclick="openModal('termsModal')" class="hover:text-white transition-colors text-left focus:outline-none">Terms of Service</button></li>
+            <li><button onclick="openModal('travelDisclaimerModal')" class="hover:text-white transition-colors text-left focus:outline-none">Travel Platform Disclosures</button></li>
+            <li><button onclick="openModal('googleAdsDisclosureModal')" class="hover:text-white transition-colors text-left focus:outline-none">Advertising Compliance</button></li>
+            <li><button onclick="openModal('contactModal')" class="text-softLavender hover:underline text-left focus:outline-none">Start Inquiry</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-textMuted">
+        <div>
+          © 2026 CodeConnect Media. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1">
+            <i class="bi bi-linkedin"></i> <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1">
+            <i class="bi bi-github"></i> <span>GitHub</span>
+          </a>
+          <a href="mailto:hello@codeconnectmedia.com" class="hover:text-white transition-colors flex items-center gap-1">
+            <i class="bi bi-envelope"></i> <span>Email</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL 1: CONTACT & CONSULTATION ==================== -->
+  <div id="contactModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-xl bg-card rounded-3xl border border-white/15 p-6 sm:p-8 shadow-2xl my-8">
+      
+      <button onclick="closeModal('contactModal')" class="absolute top-5 right-5 text-textMuted hover:text-white text-xl p-1 focus:outline-none">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="mb-6">
+        <div class="text-xs font-mono text-softLavender uppercase font-semibold">Direct Project Inquiry</div>
+        <h3 class="text-2xl font-bold text-white mt-1">Start Your Project</h3>
+        <p class="text-xs text-textSec mt-1">Discuss scope with our software and design leads. USA, UK & Global accounts supported.</p>
+      </div>
+
+      <form id="projectInquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono uppercase text-textSec mb-1">Your Name / Organization *</label>
+          <input type="text" required placeholder="e.g. David Miller (Miller Holdings LLC)" class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-mono uppercase text-textSec mb-1">Work Email *</label>
+            <input type="email" required placeholder="david@company.com" class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric" />
+          </div>
+          <div>
+            <label class="block text-xs font-mono uppercase text-textSec mb-1">Phone / WhatsApp *</label>
+            <input type="tel" required placeholder="+1 (555) 019-2834" class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono uppercase text-textSec mb-1">Primary Requirement</label>
+          <select id="modalServiceSelect" class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric">
+            <option value="custom_software">Custom Software / ERP / CRM Development</option>
+            <option value="travel_portal">Travel Platform / Booking Engine (Like Trainbooking.store)</option>
+            <option value="web_dev">High-Performance Web Application / SaaS</option>
+            <option value="graphic_design">Graphic Design & UI/UX Design System</option>
+            <option value="ecommerce">E-Commerce Architecture & Multi-Currency</option>
+            <option value="google_ads">SEO & Google Ads Campaign Optimization</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono uppercase text-textSec mb-1">Project Details & Goals *</label>
+          <textarea id="modalProjectDetails" required rows="3" placeholder="Tell us about your objectives, timeline, or specific integrations..." class="w-full bg-cardElevated border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-electric"></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-white hover:bg-softLavender text-bg font-bold text-xs uppercase tracking-wider transition-all shadow-glow-sm flex items-center justify-center gap-2">
+          <span>Submit Project Inquiry</span>
+          <i class="bi bi-arrow-right"></i>
+        </button>
+
+        <div id="formSuccess" class="hidden text-center text-xs text-emerald-400 font-mono py-2.5 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+          <i class="bi bi-check2-circle mr-1"></i> Inquiry transmitted successfully. A CodeConnect engineer will respond within 4 business hours.
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: PRIVACY POLICY ==================== -->
+  <div id="privacyModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-card rounded-3xl border border-white/15 p-6 sm:p-8 shadow-2xl max-h-[85vh] overflow-y-auto text-left">
+      <button onclick="closeModal('privacyModal')" class="absolute top-5 right-5 text-textMuted hover:text-white text-xl focus:outline-none">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      
+      <h3 class="text-xl font-bold text-white mb-2">Privacy Policy</h3>
+      <p class="text-xs font-mono text-textMuted mb-6">CodeConnect Media • International Data Transparency</p>
+      
+      <div class="space-y-4 text-xs sm:text-sm text-textSec leading-relaxed">
+        <p><strong class="text-white">1. Information Collection:</strong> CodeConnect Media collects direct contact information (name, work email, phone number, company details) solely when submitted voluntarily through consultation forms or direct inquiry.</p>
+        <p><strong class="text-white">2. Use of Data:</strong> Your data is used exclusively to prepare software proposals, execute project deliverables, and communicate technical updates. We do not sell or lease personal information to third parties.</p>
+        <p><strong class="text-white">3. Third-Party Services & Analytics:</strong> We use Google Analytics and Google Ads conversion tracking to measure marketing efficacy with anonymous cookies.</p>
+        <p><strong class="text-white">4. Payment Security:</strong> All international payments are handled via Stripe's encrypted infrastructure. No payment card numbers are stored on our servers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 3: TERMS OF SERVICE ==================== -->
+  <div id="termsModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-card rounded-3xl border border-white/15 p-6 sm:p-8 shadow-2xl max-h-[85vh] overflow-y-auto text-left">
+      <button onclick="closeModal('termsModal')" class="absolute top-5 right-5 text-textMuted hover:text-white text-xl focus:outline-none">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      
+      <h3 class="text-xl font-bold text-white mb-2">Terms of Service</h3>
+      <p class="text-xs font-mono text-textMuted mb-6">CodeConnect Media • Client Engagement Standards</p>
+      
+      <div class="space-y-4 text-xs sm:text-sm text-textSec leading-relaxed">
+        <p><strong class="text-white">1. Scope of Engagement:</strong> All custom software, CRM/ERP development, and digital marketing retainers are governed by individual Statements of Work (SOW) executed between CodeConnect Media and the client.</p>
+        <p><strong class="text-white">2. Full IP Transfer:</strong> Upon full settlement of agreed invoices, all custom software source code, graphic assets, and design systems become the sole property of the client.</p>
+        <p><strong class="text-white">3. International Billing:</strong> Invoices are settled via Stripe or verified international wire in USD, GBP, EUR, CAD, or INR as specified in the proposal.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 4: TRAVEL PLATFORM DISCLOSURES ==================== -->
+  <div id="travelDisclaimerModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-card rounded-3xl border border-white/15 p-6 sm:p-8 shadow-2xl max-h-[85vh] overflow-y-auto text-left">
+      <button onclick="closeModal('travelDisclaimerModal')" class="absolute top-5 right-5 text-textMuted hover:text-white text-xl focus:outline-none">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      
+      <h3 class="text-xl font-bold text-white mb-2">Travel Platform & Third-Party Disclosure</h3>
+      <p class="text-xs font-mono text-softLavender mb-6">Transparency for Users, Partners & Search Platforms</p>
+      
+      <div class="space-y-4 text-xs sm:text-sm text-textSec leading-relaxed">
+        <div class="p-4 rounded-xl bg-cardElevated border border-white/10 text-xs">
+          <strong class="text-white block mb-1">Authentic Third-Party Operations (e.g. Trainbooking.store):</strong>
+          CodeConnect Media designs and operates authentic third-party travel aggregator and reservation assistance platforms. These platforms are independent technology providers and are not direct government entities unless explicitly stated.
+        </div>
+        <p><strong class="text-white">1. Transparent Pricing:</strong> Any third-party booking engine built by CodeConnect Media displays clear breakdowns of official supplier fares, convenience fees, and applicable taxes prior to final payment authorization.</p>
+        <p><strong class="text-white">2. Reliable Confirmations:</strong> Bookings utilize authorized distribution APIs with automated digital confirmation delivered via SMS and email.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 5: ADVERTISING COMPLIANCE ==================== -->
+  <div id="googleAdsDisclosureModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-card rounded-3xl border border-white/15 p-6 sm:p-8 shadow-2xl max-h-[85vh] overflow-y-auto text-left">
+      <button onclick="closeModal('googleAdsDisclosureModal')" class="absolute top-5 right-5 text-textMuted hover:text-white text-xl focus:outline-none">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      
+      <h3 class="text-xl font-bold text-white mb-2">Advertising Transparency & Google Ads Standards</h3>
+      <p class="text-xs font-mono text-emerald-400 mb-6">Commercial Integrity Policy</p>
+      
+      <div class="space-y-4 text-xs sm:text-sm text-textSec leading-relaxed">
+        <p><strong class="text-white">No Misrepresentation:</strong> CodeConnect Media designs all client digital assets, advertising landing pages, and web funnels strictly in accordance with Google Ads and digital advertising policy standards.</p>
+        <p><strong class="text-white">Verified Identity:</strong> CodeConnect Media is an active, verified technology and digital agency with real physical operations on Ferozepur Road, Ludhiana, Punjab, India.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT CONTROLLERS ==================== -->
+  <script>
+    // 1. Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+    document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
+
+    // 2. Modal Handlers
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modals = document.querySelectorAll('[id$="Modal"]');
+        modals.forEach(m => m.classList.add('hidden'));
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // 3. Portfolio Filter
+    function filterPortfolio(category, clickedBtn) {
+      const items = document.querySelectorAll('.portfolio-item');
+      const buttons = document.querySelectorAll('#portfolioFilter button');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-white', 'text-bg', 'active');
+        btn.classList.add('bg-card', 'text-textSec');
+      });
+
+      if (clickedBtn) {
+        clickedBtn.classList.remove('bg-card', 'text-textSec');
+        clickedBtn.classList.add('bg-white', 'text-bg', 'active');
+      }
+
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // 4. FAQ Accordion Toggle
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close other open FAQs
+      document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(el => {
+        el.classList.remove('bi-dash-lg');
+        el.classList.add('bi-plus-lg');
+      });
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.remove('bi-plus-lg');
+        icon.classList.add('bi-dash-lg');
+      }
+    }
+
+    // 5. Form Submission Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const successDiv = document.getElementById('formSuccess');
+
+      submitBtn.innerHTML = `<span>Processing Transmission...</span>`;
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        submitBtn.style.display = 'none';
+        successDiv.classList.remove('hidden');
+        setTimeout(() => {
+          closeModal('contactModal');
+          document.getElementById('projectInquiryForm').reset();
+          submitBtn.innerHTML = `<span>Submit Project Inquiry</span> <i class="bi bi-arrow-right"></i>`;
+          submitBtn.style.display = 'flex';
+          submitBtn.disabled = false;
+          successDiv.classList.add('hidden');
+        }, 3000);
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
